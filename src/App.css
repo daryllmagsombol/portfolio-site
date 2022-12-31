@@ -1,38 +1,54 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #061e3b;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+
+  /* font-family: 'LeagueSpartan', 'Helvetica Neue Thin', Courier, monospace; */
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  /* body won't work ¯\_(ツ)_/¯ */
+  scroll-snap-type: y mandatory;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('./fonts/LeagueSpartan-Bold.otf');
+}
+@font-face {
+  font-family: 'Helvetica Neue Thin';
+  src: url('./fonts/Helvetica\ Neue\ UltraLight.otf');
+}
+/* .logoName {
+  font-family: 'Helvetica Neue Thin';
+} */
+.header {
+  margin: 10px;
+}
+.snapPageScroll {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+.nameDiv {
+  top: 30%;
+  left: 8.5%;
+  position: absolute;
+  display: inline-block;
+}
+
+.nameHeader {
+  font-family: 'LeagueSpartan';
+  letter-spacing: 7.5px;
+  margin: 0;
+  text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+  font-size: 3rem;
+}
+
+.namePosition {
+  font-family: 'Helvetica Neue Thin';
+  letter-spacing: 6.5px;
+  text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+  font-size: 2.1rem;
 }
